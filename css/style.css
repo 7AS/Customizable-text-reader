@@ -1,0 +1,414 @@
+body,html
+{
+    width : 100%;
+    font-size : 1.2em;
+    font-family : Arial, Helvetica, sans-serif;
+    box-sizing : border-box;
+}
+h1
+{
+    margin : auto;
+    padding : 1em;
+    font-weight : bold;
+}
+.tabulation
+{
+    margin-left : 2em;
+}
+.souligne
+{
+    text-decoration : underline;
+}
+.gras
+{
+    font-weight : bold;
+}
+.italique
+{
+    font-style : italic;
+}
+/* Tutoriel */
+#tutoriel, #selectionLangue
+{
+    width : 100%;
+    height : 100%;
+    position : fixed;
+    top : 0%;
+    left : 0%;
+    z-index : 10;
+    display : flex;
+    flex-direction : column;
+}
+#tutoriel #instructions
+{
+    width : 100%;
+    height : 85%;
+    box-sizing : border-box;
+    display : flex;
+    flex-direction : column;
+    text-align : center;
+    justify-content : center;
+    font-size : 1.2em;
+}
+#tutoriel #instructions div
+{
+    width : 90%;
+    margin : 0% 5% 0% 5%;
+    max-height : 50%;
+}
+#tutoriel #instructions #image
+{
+    max-height : 65%;
+}
+#tutoriel #instructions #texte
+{
+    max-height : 35%;
+}
+#tutoriel #instructions div img
+{
+    max-width : 100%;
+    max-height : 100%;
+    margin : 0%;
+    padding : 0%;
+    box-sizing : border-box;
+}
+#tutoriel #instructions #image
+{
+    margin-bottom : 2em;
+}
+#tutoriel #boutons
+{
+    width : 100%;
+    height : 15%;
+    box-sizing : border-box;
+    display : flex;
+    flex-direction : row;
+}
+#tutoriel #boutons div
+{
+    width : 50%;
+    margin : 1em;
+    cursor : pointer;
+    display : grid;
+    align-items : center;
+    text-align : center;
+}
+/* Sélection de la langue*/
+#selectionLangue
+{
+    flex-direction : row;
+    z-index : 11;
+}
+#selectionLangue div
+{
+    width : 50%;
+    margin : auto;
+    padding : 10%;
+    text-align : center;
+    font-size : 3em;
+    cursor : pointer;
+}
+/* Corps principal */
+main
+{
+    width : 100%;
+    box-sizing : border-box;
+    padding : 5% 5% 50% 5%;
+    display : grid;
+    align-items : center;
+}
+/* Information à l'ouverture */
+#informationDemarrage
+{
+    font-size : 2.25em;
+    line-height : 1.5;
+    text-align : center;
+    width : 90%;
+    margin : auto;
+}
+#informationDemarrage::before
+{
+    content : ' 🠗 ';
+    font-weight : bold;
+}
+/* Zone du livre */
+#conteneurLivre, #previsualisation
+{
+    word-wrap : break-word;
+}
+/* Menu */
+#menu
+{
+    display : none;
+    width : 100%;
+    height : 100%;
+    position : fixed;
+    top : 0;
+    z-index : 2;
+    display : flex;
+    flex-direction : column;
+}
+/* Navigation */
+#menu #navigation
+{
+    display : flex;
+    flex-direction : row;
+    justify-content : center;
+    width : 100%;
+}
+#menu #navigation div
+{
+    width : 25%;
+    padding : 1em;
+    text-align : center;
+    cursor : pointer;
+}
+#menu #navigation div:before
+{
+    padding : 0.25em 0.5em;
+    border-radius : 100%;
+    margin-right : 0.5em;
+}
+#menu #navigation div:nth-child(1):before
+{
+    content : '1';
+}
+#menu #navigation div:nth-child(2):before
+{
+    content : '2';
+}
+#menu #navigation div:nth-child(3):before
+{
+    content : '3';
+}
+#menu #navigation div:nth-child(4):before
+{
+    content : '4';
+}
+/* Onglets */
+#menu #onglets
+{
+    width : 95%;
+    text-align : center;
+    overflow : scroll;
+    margin : auto;
+    padding : 0;
+    box-sizing : border-box;
+}
+#informationOnglets
+{
+    margin:auto;
+    width : 100%;
+}
+#menu #onglets #informationOnglets::before
+{
+    content : '🠕 🠕 🠕';
+    font-size : 2em;
+}
+/* Ajouter du texte */
+#zoneInteractive
+{
+    box-sizing : border-box;
+    margin-left : 1em;
+}
+#oOuvrir input, #zoneInteractive button, #zoneInteractive textarea
+{
+    width : 90%;
+    box-sizing : border-box;
+    margin : auto;
+    border : none;
+    outline : none;
+}
+#zoneInteractive textarea
+{
+    padding : 2%;
+    height : 30em;
+    resize : none;
+}
+#oOuvrir input, #zoneInteractive button
+{
+    padding : 1%;
+    cursor : pointer;
+    font-size : .9em;
+    margin-bottom : 2em;
+}
+#zoneInteractive
+{
+    margin : auto;
+    width : 100%;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : baseline;
+}
+/* Réglages */
+#oReglages
+{
+    display : flex;
+    flex-direction : row;
+}
+#previsualisation, #reglages
+{
+    width : 50%;
+    padding : 0% 5% 0% 5%;
+}
+.reglageNom
+{
+    margin-top : 2%;
+    margin-bottom : 2%;
+    padding : 1%;
+    text-align : left;
+}
+#pagePrevisualisation
+{
+    padding : 5%;
+    text-align : left;
+    margin-bottom : 2em;
+}
+#reglages
+{
+    padding-bottom : 5%;
+}
+.reglageChoix div, .reglageChoix input
+{
+    padding : 0.25em;
+    margin-bottom : 0.25em;
+}
+.reglageChoix:hover
+{
+    cursor : pointer;
+}
+/* Menu, navigation, progression */
+footer
+{
+    position : fixed;
+    bottom : 0;
+    display : flex;
+    flex-direction : row;
+    justify-content : space-evenly;
+    font-size : 1.25em;
+    width : 100%;
+    box-shadow : 0 0 2em black;
+}
+footer div
+{
+    width : 25%;
+    padding : 1em;
+}
+#boutonMenu{
+    text-align : left;
+}
+#boutonMenu:hover{
+    background-color : #cccc00;
+}
+.navigation{
+    text-align : center;
+}
+.navigation:hover{
+    background-color : #cc0000;
+}
+#boutonMenu, .navigation{
+    cursor : pointer;
+}
+#progression{
+    text-align : right;
+}
+#progression::after{
+    content : '% / 100%';
+}
+
+/* Thèmes et jeux de couleurs */
+:root
+{
+    --couleurA : #cccccc;
+    --couleurB : #373737;
+    --couleurC : #464646;
+}
+a
+{
+    color : var(--couleurA);
+}
+main, footer
+{
+    color : var(--couleurB);
+    background-color : var(--couleurC);
+}
+footer
+{
+    color : var(--couleurA);
+    background-color : var(--couleurC);
+}
+#menu
+{
+    color : var(--couleurA);
+    background-color : var(--couleurC);
+}
+#menu #onglets
+{
+    border : 2px solid var(--couleurB);
+}
+#menu #navigation div
+{
+    background-color : var(--couleurB);
+    border-top : none;
+    color : var(--couleurA);
+}
+#menu #navigation div:hover
+{
+    color : var(--couleurA);
+    background-color : var(--couleurC);
+}
+.reglageNom
+{
+    border-bottom : 2px solid var(--couleurA);
+}
+#zoneInteractive textarea
+{
+    color : var(--couleurA);
+    background-color : var(--couleurB);
+    border-bottom : 2px solid var(--couleurA);
+}
+#menu #navigation div:before
+{
+    border : 2px solid var(--couleurA);
+    color : var(--couleurA);
+}
+#oOuvrir input, #zoneInteractive button, .reglageChoix div
+{
+    background-color : var(--couleurB);
+    color : var(--couleurA);
+}
+#oOuvrir input:hover, #zoneInteractive button:hover, .reglageChoix div:hover
+{
+    color : var(--couleurB);
+    background-color : var(--couleurA);
+}
+::placeholder
+{
+    color : var(--couleurA);
+}
+/* Tutoriel etc. */
+#selectionLangue, #instructions, #tutoriel #boutons
+{
+    color : var(--couleurA);
+    background-color : var(--couleurC); 
+}
+#selectionLangue div:hover
+{
+    color : var(--couleurC);
+    background-color : var(--couleurA);
+}
+#tutoriel #boutons div
+{
+    background-color : var(--couleurB);
+    color : var(--couleurA);
+}
+#tutoriel #boutons div:hover
+{
+    color : var(--couleurB);
+    background-color : var(--couleurA); 
+}
+#tutoriel #instructions div img
+{
+    border : 2px solid var(--couleurA);
+}

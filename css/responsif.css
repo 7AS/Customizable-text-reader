@@ -1,0 +1,49 @@
+@media(max-aspect-ratio : 6/5) {
+    main
+    {
+        width : 100%;
+        padding : 5% 15% 15% 5%;
+    }
+    footer .navigation
+    {
+        display:none;
+    }
+    footer div
+    {
+        width : 50%;
+    }
+    #progression
+    {
+        border-left : 2px solid white;
+    }
+    #menuResponsif
+    {
+        position : fixed;
+        width : 10%;
+        height : 50%;
+        flex-direction : column;
+        justify-content : center;
+        top : 25%;
+        right : 0;
+        display : flex;
+    }
+    #menuResponsif div
+    {
+        height : 50%;
+        display : grid;
+        place-items : center;
+    }
+    #menuResponsif div:hover
+    {
+        background-color : #cc0000;
+    }
+    #menuResponsif
+    {
+        border : 2px solid var(--couleurA);
+    }
+    #menuResponsif div
+    {
+        color : var(--couleurA);
+        background-color : var(--couleurC);
+    }
+}

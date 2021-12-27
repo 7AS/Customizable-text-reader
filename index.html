@@ -1,0 +1,167 @@
+<!--
+    Lecteur de textes personnalisable.
+    Auteur initial : https://github.com/7AS
+    Version : 1.0 (12.2021)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Lecteur de textes personnalisable.'>
+    <meta name='author' content='https://github.com/7AS'>
+    <link rel='stylesheet' href='css/reset.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/responsif.css'>
+    <script src='scripts/jquery-3.6.0.min.js'></script>
+    <script src='scripts/script.js'></script>
+    <title id='titrePage'>?</title>
+</head>
+<body>
+    <!-- Sélection de la langue -->
+    <div id='selectionLangue'>
+        <div id='langueFr' valeur='fr'>Français</div>
+        <div id='langueEn' valeur='en'>English</div>
+    </div>
+    <!-- Tutoriel -->
+    <div id='tutoriel'>
+        <div id='instructions'>
+            <div id='image'></div>
+            <div id='texte'></div>
+        </div>
+        <div id='boutons'>
+            <div id='boutonPasser'></div>
+            <div id='boutonSuivant'></div>
+        </div>
+    </div>
+    <!-- Main -->
+    <main>
+        <!-- Consigne initiale -->
+        <div id='informationDemarrage'>
+        </div>
+        <!-- Conteneur du texte du livre -->
+        <div id='conteneurLivre'>
+        </div>
+    </main>
+    <!-- Menu -->
+    <div id='menu'>
+        <div id='navigation'>
+            <div id='nOuvrir' class='ongletActif'>?</div>
+            <div id='nAjouter'>?</div>
+            <div id='nReglages'>?</div>
+            <div id='nFermer'>?</div>
+        </div>
+        <div id='onglets'>
+            <div id='informationOnglets'>
+                <h1 id='informationOngletsTexte'>?</h1>
+            </div>
+            <div id='oOuvrir' class='onglet'>
+                <h1 id='oOuvrirTexte'>?</h1>              
+                <input type='file' id='livreUtilisateur'> 
+            </div>
+            <div id='oAjouter' class='onglet'>
+                <h1 id='oAjouterTexte'>?</h1>
+                <div id='zoneInteractive'>
+                    <textarea placeholder=''></textarea>
+                    <button id='boutonAjouterTexte'>?</button>
+                </div>
+            </div>
+            <div id='oReglages' class='onglet'>
+                <div id='previsualisation'>
+                    <h1 id='previsualisationTexte'>?</h1>
+                    <div id='pagePrevisualisation'>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus tempore iusto excepturi ab similique, repellendus magnam dignissimos pariatur delectus accusantium a quia totam et asperiores est esse nemo nesciunt porro. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus tempore iusto excepturi ab similique, repellendus magnam dignissimos pariatur delectus accusantium a quia totam et asperiores est esse nemo nesciunt porro. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus tempore iusto excepturi ab similique, repellendus magnam dignissimos pariatur delectus accusantium a quia totam et asperiores est esse nemo nesciunt porro.<br><br>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus tempore iusto excepturi ab similique, repellendus magnam dignissimos pariatur delectus accusantium a quia totam et asperiores est esse nemo nesciunt porro.<br><br>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus tempore iusto excepturi ab similique, repellendus magnam dignissimos pariatur delectus accusantium a quia totam et asperiores est esse nemo nesciunt porro.
+                    </div>
+                </div>
+                <div id='reglages'>
+                    <h1 id='reglagesTexte'>?</h1>
+                    <div id='langue'>
+                        <div id='reglagesLangue' class='reglageNom'>?</div>
+                        <div class='reglageChoix'>
+                            <div valeur='fr'>Français</div>
+                            <div valeur='en'>English</div>
+                        </div>
+                    </div>
+                    <div id='theme'>
+                        <div id='reglagesTheme' class='reglageNom'>?</div>
+                        <div class='reglageChoix'>
+                            <div id='reglagesThemeJour' valeur='jour'>?</div>
+                            <div id='reglagesThemeNuit' valeur='nuit'>?</div>
+                            <div id='reglagesThemeHC' valeur='hc'>?</div>
+                        </div>
+                    </div>
+                    <div id='police'>
+                        <div id='reglagesPolice' class='reglageNom'>?</div>
+                        <div class='reglageChoix'>
+                            <div valeur='Arial'>Arial</div>
+                            <div valeur='Tahoma'>Tahoma</div>
+                            <div valeur='Times'>Times</div>
+                            <div valeur='Verdana'>Verdana</div>
+                        </div>
+                    </div>
+                    <div id='taille'>
+                        <div id='reglagesTailleTexte' class='reglageNom'>?</div>
+                        <div class='reglageChoix'>
+                            <div id='reglagesTailleTexteTresPetit' valeur='0.75'>?</div>
+                            <div id='reglagesTailleTextePetit' valeur='1'>?</div>
+                            <div id='reglagesTailleTexteNormal' valeur='1.25'>?</div>
+                            <div id='reglagesTailleTexteGrand' valeur='1.5'>?</div>
+                            <div id='reglagesTailleTexteTresGrand' valeur='2'>?</div>
+                            <div id='reglagesTailleTexteGeant' valeur='3'>?</div>
+
+                        </div>
+                    </div>
+                    <div id='espacementLigne'>
+                        <div id='reglagesEspacementLignesTexte' class='reglageNom'>?</div>
+                        <div class='reglageChoix'>
+                            1 <input type='range' min='4' max='20' value='8' id='lineHeight'> 5
+                        </div>
+                    </div>
+                    <div id='espacementMots'>
+                        <div id='reglagesEspacementMotsTexte' class='reglageNom'>?</div>
+                        <div class='reglageChoix'>
+                            0.25 <input type='range' min='1' max='8' value='1' id='wordSpacing'> 1
+                        </div>
+                    </div>
+                    <div id='alignement'>
+                        <div id='reglagesAlignementTexte' class='reglageNom'>?</div>
+                        <div class='reglageChoix'>
+                            <div id='alignementGauche' valeur='left'>?</div>
+                            <div id='alignementCentre' valeur='center'>?</div>
+                            <div id='alignementJustifie' valeur='justify'>?</div>
+                        </div>
+                    </div>
+                    <div id='couleurs'>
+                        <div id='reglagesCouleursTexte' class='reglageNom'>?</div>
+                        <div class='reglageChoix'>
+                            <div>
+                                <p id='couleurDuTexte' >?</p>
+                                <input type='color' value='#000000' id='couleurTexte'>
+                            </div>
+                            <div>
+                                <p id='couleurArrierePlan' >?</p>
+                                <input type='color' value='#cccccc' id='couleurFond'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu, navigation et progression -->
+    <footer>
+        <div id='boutonMenu'>?</div>
+        <div id='boutonReculer' valeur='-0.5' class='navigation'>?</div>
+        <div id='boutonAvancer' valeur='0.5' class='navigation'>?</div>
+        <div id='progression'>0</div>
+    </footer>
+    <!-- Menu da navigation responsif -->
+    <div id='menuResponsif'>
+        <div valeur='-0.5' class='navigation'>-</div>
+        <div valeur='0.5' class='navigation'>+</div>
+    </div>
+</body>
+</html>
